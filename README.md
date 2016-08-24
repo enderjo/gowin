@@ -5,11 +5,11 @@ Provide simple Windows OS interface to manipulate windows registry, environment 
 
 ###How to use it
 ```
-	go get github.com/luisiturrios/gowin
+	go get github.com/getlantern/gowin
 ```
 
 ```
-	import "github.com/luisiturrios/gowin"
+	import "github.com/getlantern/gowin"
 ```
 
 
@@ -54,16 +54,16 @@ Provide simple Windows OS interface to manipulate windows registry, environment 
 ###Example Read windows ShellFolders
 ```
 	folders := gowin.ShellFolders{gowin.ALL}
-	//	Or 
+	//	Or
 	folder := new(gowin.ShellFolders)
 
 	//Read ProgramFiles
 	fmt.Println(folders.ProgramFiles())
-	
+
 	//Read all user AppData
 	folders.Context = gowin.ALL
 	fmt.Println(folders.AppData())
-	
+
 	//Read Current user AppData
 	folders.Context = gowin.USER
 	fmt.Println(folders.AppData())
